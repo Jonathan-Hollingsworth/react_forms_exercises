@@ -8,7 +8,7 @@ function Box({width, height, color, removeSelf}) {
             style={{width: Number(width), height: Number(height), backgroundColor: color}}
           >
           </div>
-          <button onClick={removeSelf}>X</button>
+          <button className="delete" onClick={removeSelf}>X</button>
         </>
     )
 }
