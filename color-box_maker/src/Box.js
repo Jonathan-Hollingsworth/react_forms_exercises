@@ -4,7 +4,7 @@ function Box({width, height, color, removeSelf}) {
     return (
         <>
           <div 
-            className="box" 
+            className="Box" 
             style={{width: Number(width), height: Number(height), backgroundColor: color}}
           >
           </div>
