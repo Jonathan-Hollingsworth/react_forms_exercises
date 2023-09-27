@@ -2,6 +2,7 @@ import { v4 as uuid } from 'uuid';
 import React, { useState } from "react";
 import Box from "./Box"
 import NewBoxForm from "./NewBoxForm"
+import './Boxlist.css';
 
 function BoxList() {
     const initialBoxes = []
@@ -19,15 +20,17 @@ function BoxList() {
 
     return (
         <>
-          {boxes.map((box) => 
-            <Box 
-              key={box.id} 
-              width={box.width} 
-              height={box.height} 
-              color={box.color} 
-              removeSelf={(evt) => removeBox(box.id)} 
-            />
-          )}
+          <section className='Boxes'>
+            {boxes.map((box) => 
+              <Box 
+                key={box.id} 
+                width={box.width} 
+                height={box.height} 
+                color={box.color} 
+                removeSelf={(evt) => removeBox(box.id)} 
+              />
+            )}  
+          </section>
         <NewBoxForm addBox={addBox}/>
         </>
     )
