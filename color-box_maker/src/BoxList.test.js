@@ -13,7 +13,7 @@ it("matches snapshot", function() {
   expect(asFragment()).toMatchSnapshot();
 });
 
-it("adds and deletes boxes properly when form is submitted", function() {
+it("adds boxes properly when form is submitted", function() {
   const { getByLabelText, queryByText, container } = render(<BoxList />);
   
   expect(container.querySelector('.Box')).not.toBeInTheDocument();
